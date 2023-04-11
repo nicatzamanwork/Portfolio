@@ -11,7 +11,7 @@ import { NavLink } from "react-bootstrap";
 function Projects() {
   return (
     <div className="projects">
-      <h1>My Projects</h1>
+      <h1>My Projects in Use</h1>
       <div className="projectList">
         <a
           href="https://employment.az/"

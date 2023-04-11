@@ -3,7 +3,16 @@ import "../styles/Home.css";
 import { LinkedIn } from "@mui/icons-material";
 import { Email } from "@mui/icons-material";
 import { GitHub } from "@mui/icons-material";
+import ReorderIcon from "@mui/icons-material/Reorder";
+// import "../styles/Navbar.css";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 function Home() {
+  const [expandNavbar, setExpandNavbar] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    setExpandNavbar(false);
+  }, [location]);
   return (
     <div className="home">
       <div className="about">
@@ -32,20 +41,26 @@ function Home() {
         </div>
       </div>
       <div className="skills">
-        <h1>Skills</h1>
-        <ul>
-          <li>
-            <h2>Front-End</h2>
-            <span>
-              JavaScript, ReactJS, Redux Toolkit, Bootstrap, MaterialUI, HTML,
-              CSS, TypeScript
-            </span>
-          </li>
-          <li>
-            <h2>Back-End</h2>
-            <span>NodeJS, ExpressJS, MongoDB, MS SQL</span>
-          </li>
-        </ul>
+        <h1>SKILLS</h1>
+        <div className="column-left">
+          <h2>Front-End</h2>
+          <li>JavaScript</li>
+          <li>ReactJS</li>
+          <li>Redux Toolkit</li>
+          <li>Bootstrap</li>
+          <li>MaterialUI</li>
+          <li> HTML</li>
+          <li> CSS</li>
+          <li> TypeScript</li>
+        </div>
+        <div className="column-right">
+          <h2>Back-End</h2>
+          <li>NodeJS</li>
+          <li>ExpressJS</li>
+          <li> MongoDB</li>
+          <li>MS SQL</li>
+          <li>REST API</li>
+        </div>
       </div>
     </div>
   );
